@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>限制用户上传文件类型的代码 - 分享JavaScript-sharejs.com</title>
+<meta name="Copyright" content="JavaScript分享网 http://www.sharejs.com/" />
+<meta name="description" content="限制用户上传文件类型的代码.JavaScript分享网" />
+<meta content="JavaScript,分享,JavaScript代码,Ajax" name="keywords" />
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+extArray = new Array(".gif", ".jpg", ".png");
+function LimitAttach(form, file) {
+allowSubmit = false;
+if (!file) return;
+while (file.indexOf("\\") != -1)
+file = file.slice(file.indexOf("\\") + 1);
+ext = file.slice(file.indexOf(".")).toLowerCase();
+for (var i = 0; i < extArray.length; i++) {
+if (extArray[i] == ext) { allowSubmit = true; break; }
+}
+if (allowSubmit) form.submit();
+else
+alert("对不起，只能上传以下格式的文件:  " 
++ (extArray.join("  ")) + "\n请重新选择符合条件的文件"
++ "再上传.");
+}
+//  End -->
+</script>
+</head>
+
+<body>
+
+<script>
+document.write(extArray.join("  "));
+</script>
+<p>
+
+<form method=post name=upform action="http://www.sharejs.com" enctype="multipart/form-data">
+<input type=file name=uploadfile>
+<p>
+<input type=button name="Submit" value="Submit" onclick="LimitAttach(this.form, this.form.uploadfile.value)">
+</form>
+
+<br><br>
+<div align="center">
+<script language="javascript" src="http://www.sharejs.com/js/720.js"></script>
+<br><br>
+获取更多JavaScript代码，请登录JavaScript分享网 <a href="http://www.sharejs.com">http://www.sharejs.com</a>
+</div>
+</body>
+</html>

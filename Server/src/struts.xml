@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<constant name="struts.multipart.saveDir" value="/tmp"></constant>
+	<constant name="struts.multipart.maxSize" value="52428800" />
+
+	<package name="struts2" extends="struts-default">
+
+		<action name="fileUpload" class="FileUpload.FileUpload" method="write"></action>
+		<action name="Login" class="src.Login">
+			<result name="index" type="redirectAction">index.jsp</result>
+			<result name="signin" type="redirectAction">signin.jsp</result>
+		</action>
+		<action name="Signout" class="src.Signout">
+			<result name="index" type="redirectAction">index.jsp</result>
+		</action>		
+		<action name="Regist" class="src.Regist">
+			<result name="index" type="redirectAction">index.jsp</result>
+			<result name="regist" type="redirectAction">regist.jsp</result>
+		</action>			
+		<action name="ChangeInfo" class="src.ChangeInfo">
+			<result name="setinfo" type="redirectAction">setinfo.jsp</result>
+		</action>			
+		<action name="UploadImg" class="src.UploadImg">
+			<result name="setinfo" type="redirectAction">setinfo.jsp</result>
+		</action>	
+		<action name="deleteRecord" class="src.DeleteRecord">
+			<result name="manage" type="redirectAction">manage.jsp</result>
+		</action>	
+		<action name="restoreRecord" class="src.RestoreRecord">
+			<result name="manage" type="redirectAction">manage.jsp</result>
+		</action>		
+		<action name="editText" class="src.EditText">
+			<result name="index" type="redirect">${redirectURL}</result>
+			<result name="manage" type="redirect">${redirectURL}</result>
+		</action>	
+		<action name="MobileLogin" class="src.MobileLogin" method="write"></action>	
+		<action name="MobileRegist" class="src.MobileRegist" method="write"></action>						
+	</package>
+</struts> 
