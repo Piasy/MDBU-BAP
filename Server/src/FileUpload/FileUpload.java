@@ -23,7 +23,7 @@ public class FileUpload extends ActionSupport
 	private String photoFileName, voiceFileName;
 	String url = "jdbc:mysql://localhost/MyPro";
     String user = "root";
-    String pwd = "x2011011238@";    
+    String pwd = "passwd";    
     
 	public String getUsername() {
 		return username;

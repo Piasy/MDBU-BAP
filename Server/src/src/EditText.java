@@ -12,7 +12,7 @@ public class EditText extends ActionSupport
 	private static final long serialVersionUID = 1L;
 	String url = "jdbc:mysql://localhost/MyPro";
     String user = "root";
-    String pwd = "x2011011238@";  
+    String pwd = "passwd";  
     private String text;
     private String type, pageIndex;
     private String redirectURL;

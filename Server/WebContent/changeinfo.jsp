@@ -4,7 +4,7 @@
 Connection conn; 
 String strConn; 
 Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-conn= java.sql.DriverManager.getConnection("jdbc:mysql://localhost/MyPro","root","x2011011238@"); 
+conn= java.sql.DriverManager.getConnection("jdbc:mysql://localhost/MyPro","root","passwd"); 
 if(conn==null)
 {
 	System.out.println("get Conn Error");

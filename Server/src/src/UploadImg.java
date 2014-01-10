@@ -20,7 +20,7 @@ public class UploadImg extends ActionSupport
 	private static final long serialVersionUID = 1L;
 	String url = "jdbc:mysql://localhost/MyPro";
     String user = "root";
-    String pwd = "x2011011238@";  
+    String pwd = "passwd";  
     private File photo;
     private String photoContentType, photoFileName;
     
